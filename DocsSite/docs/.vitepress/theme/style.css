@@ -1,0 +1,96 @@
+:root {
+  --vp-c-brand-1: #06b6d4;
+  --vp-c-brand-2: #0891b2;
+  --vp-c-brand-3: #0e7490;
+  --vp-c-brand-soft: rgba(6, 182, 212, 0.16);
+}
+
+.dark {
+  --vp-c-bg: #09090b;
+  --vp-c-bg-alt: #18181b;
+  --vp-c-bg-elv: #27272a;
+  --vp-c-bg-soft: #27272a;
+  --vp-c-text-1: #fafafa;
+  --vp-c-text-2: #a1a1aa;
+  --vp-c-text-3: #71717a;
+  --vp-c-divider: rgba(255, 255, 255, 0.08);
+  --vp-c-gutter: rgba(255, 255, 255, 0.08);
+  --vp-nav-bg-color: rgba(9, 9, 11, 0.7);
+  --vp-c-brand-1: #22d3ee;
+  --vp-c-brand-2: #06b6d4;
+  --vp-c-brand-3: #0891b2;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.VPNav {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.VPSidebar {
+  background-color: var(--vp-c-bg);
+  border-right: 1px solid var(--vp-c-divider);
+}
+
+.VPCard, .VPHero .image, .custom-block, .vp-doc div[class*='language-'] {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  background-color: rgba(24, 24, 27, 0.4);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.VPCard:hover {
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 10px 15px -3px rgba(6, 182, 212, 0.1);
+}
+
+.VPButton.brand {
+  background-color: var(--vp-c-brand-1);
+  color: #000;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.3);
+}
+
+.VPButton.brand:hover {
+  background-color: var(--vp-c-brand-2);
+  transform: translateY(-1px);
+  box-shadow: 0 0 25px rgba(34, 211, 238, 0.5);
+}
+
+.VPButton.alt {
+  border-radius: 8px;
+  background-color: var(--vp-c-bg-elv);
+  border: 1px solid var(--vp-c-divider);
+}
+
+.custom-block.tip {
+  border-color: var(--vp-c-brand-1);
+  background-color: rgba(6, 182, 212, 0.05);
+}
+
+.VPHero::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, rgba(34,211,238,0.15) 0%, rgba(9,9,11,0) 70%);
+  z-index: -1;
+  pointer-events: none;
+  filter: blur(60px);
+}
+
+.vp-doc h1 {
+  background: -webkit-linear-gradient(120deg, #fff, #a1a1aa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
